@@ -1,7 +1,7 @@
 # account-linking
 Account linking for Discord with Google SSO using PassportJS, NodeJS, ExpressJS, MongoDB. 
-This app create for Link and Unlink social media account to the app such as Facebook, Twitter and etc.
-In this app we use a Discord as a social media account that connect with user that login with Google SSO. 
+This app create for Link and Unlink social media account to the app such as Facebook, Twitter and etc. 
+This app use Discord as a social media account to connect with the user that login using Google SSO.
 
 We use PassportJS as our authentication middleware for Node.js. Check more info click here [PassportJS Pages](http://www.passportjs.org/).
 
