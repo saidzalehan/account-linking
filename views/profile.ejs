@@ -1,0 +1,30 @@
+<br>
+<center>
+    <h1>Account Linking | Profile</h1>
+    <div>
+        <!-- check if the user has this token (is the user authenticated with this social account) -->
+        <% if (user.google.token) { %>
+            <p>
+                <img src="<%= user.google.picture %>" alt="Profile Picture" height="100px" width="100px"><br>
+                <strong>NAME : </strong><%= user.google.name %><br>
+                <strong>EMAIL : </strong><%= user.google.email %><br>
+            </p>
+        <% } %>
+    </div>
+    <div style="border: 10px; border-color: purple; border-style: solid; padding: 10px; margin: 10px;">
+        <h3>Discord</h3>
+            <!-- check if the user has this token (is the user authenticated with this social account) -->
+            <% if (user.discord.token) { %>
+                <p>
+                    <img src="https://cdn.discordapp.com/avatars/<%= user.discord.id %>/<%= user.discord.picture %>.png" alt="Profile Picture" height="100px" width="100px"><br>
+                    <strong>NAME : </strong><%= user.discord.name %><br>
+                    <strong>EMAIL : </strong><%= user.discord.email %><br>
+                </p>
+
+                <button><a href="/unlink/discord">Unlink</a></button>
+            <% } else { %>
+                <button><a href="/connect/discord">Connect Discord</a></button>
+            <% } %>
+    </div>
+    <button type="submit"><a href="/logout">Logout</a></button>
+</center>
